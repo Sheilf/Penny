@@ -8,6 +8,8 @@ import firebase from 'firebase';
 import './firebaseConfig.ts';
 
 
+import {CardGrid} from './CardGrid/CardGrid';
+
 
 const uiConfig: Object = {
   // Popup signin flow rather than redirect flow.
@@ -94,8 +96,13 @@ function SignInScreen() {
 
       <div style={{width: '100%', display: 'flex', justifyContent: 'center'}}>
 
-      <button style={{ display: 'flex', justifyContent: 'center'}} onClick={() => firebase.auth().signOut()}>Sign-out</button>
+        <button style={{ display: 'flex', justifyContent: 'center'}} onClick={() => firebase.auth().signOut()}>Sign-out</button>
 
+      </div>
+
+
+      <div className="flex-row-centered">
+        <CardGrid />
       </div>
     </div>
   );

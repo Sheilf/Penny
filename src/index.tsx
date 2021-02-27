@@ -3,10 +3,33 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import SignInScreen from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+import { Tech, Financial, Health, Retail, Industrial, Property } from './routes/Routes';
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
+      
+
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <SignInScreen />
+    <BrowserRouter>
+
+      <Route exact path="/" component={SignInScreen}></Route>
+      <Route exact path="/technology" component={Tech}></Route>
+      <Route exact path="/financial" component={Financial}></Route>
+      <Route exact path="/health" component={Health}></Route>
+      <Route exact path="/retail" component={Retail} />
+      <Route exact path="/industrial" component={Industrial}></Route>
+      <Route exact path="/property" component={Property}></Route>
+
+  
+    </BrowserRouter>
+    
   </React.StrictMode>,
   document.getElementById('root')
 );

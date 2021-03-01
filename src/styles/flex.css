@@ -41,3 +41,16 @@
     justify-content: center;
     align-items: center;
 }
+
+
+.clean-link{
+    color: white;
+    text-decoration: none;
+
+
+}
+
+.clean-link:visited{
+    color: white;
+
+}
